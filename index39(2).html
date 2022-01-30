@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1(2)</title>
+</head>
+<body>
+    <script>
+        let a = prompt('Введите значение переменной а(числовое значение): ','');
+        if (a.trim() == '') {
+            alert('Число a не введено!')
+        }
+        else if (!isFinite(a)) {
+            alert('Введенное Вами значение, не является числом, либо оно является NaN, положительной или отрицательной бесконечностью');
+        }
+
+        let b = prompt('Введите значение переменной b(числовое значение):','');
+        if (b.trim() == '') {
+            alert('Число b не введено!')
+        }
+        else if (!isFinite(b)) {
+            alert('Введенное Вами значение, не является числом, либо оно является NaN, положительной или отрицательной бесконечностью');
+        }
+
+        let c = prompt('Введите значение переменной c(числовое значение):','');
+        if (c.trim() == '') {
+            alert('Число c не введено!')
+        }
+        else if (!isFinite(c)) {
+            alert('Введенное Вами значение, не является числом, либо оно является NaN, положительной или отрицательной бесконечностью');
+        }
+
+        if (!isFinite(a) || a.trim() == '' || !isFinite(b) || b.trim() == '' || !isFinite(c) || c.trim() == '') {
+            alert('Вы не ввели одно, два или все числа. Либо одно, два или все числа являются NaN, положительной или отрицательной бесконечностью');
+        }
+        else {
+            let discriminant = (a, b, c) => {
+            return b * b - 4 * a * c;
+            }
+            alert('D = '+discriminant(a, b, c));
+        }
+    </script>
+</body>
+</html>
